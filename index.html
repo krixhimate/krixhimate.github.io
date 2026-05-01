@@ -10,14 +10,14 @@
 body {
   margin:0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #ffffff 40%, #eaf6fb 100%);
+  background:#f5f7f6;
 }
 
 /* NAVBAR */
 .navbar {
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:12px;
   padding:15px 20px;
   background:white;
 }
@@ -27,7 +27,7 @@ body {
 }
 
 .title {
-  font-size:22px;
+  font-size:20px;
   font-weight:600;
 }
 
@@ -43,7 +43,7 @@ body {
   border-radius:15px;
 }
 
-/* DOWNLOAD BUTTON */
+/* BUTTON */
 .btn {
   display:inline-block;
   margin-top:20px;
@@ -53,7 +53,7 @@ body {
   font-size:18px;
   border-radius:12px;
   text-decoration:none;
-  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+  box-shadow:0 6px 15px rgba(46, 204, 113, 0.4);
   transition:0.3s;
 }
 
@@ -61,13 +61,13 @@ body {
   transform:scale(1.05);
 }
 
-/* INSTALL GUIDE */
+/* GUIDE */
 .guide {
   margin:20px;
   padding:20px;
   border-radius:15px;
-  background: linear-gradient(135deg,#1e3c2f,#2f6f54);
-  color:white;
+  background:#e8f5ee;
+  color:#1e3c2f;
   text-align:center;
 }
 
@@ -76,11 +76,11 @@ body {
   margin:20px;
   padding:20px;
   border-radius:15px;
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(10px);
+  background:white;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* FEATURE ITEMS */
+/* FEATURES */
 .feature {
   background:#dff3ea;
   padding:12px;
@@ -104,7 +104,7 @@ body {
   <img src="poster.png">
 
   <a id="downloadBtn" class="btn"
-  href="https://drive.google.com/file/d/1C8z2B44RY2LNuEIJmIVTJ92nzsQM3V9W/view"
+  href="https://drive.google.com/uc?export=download&id=1C8z2B44RY2LNuEIJmIVTJ92nzsQM3V9W"
   target="_blank">
   ⬇ Download App
   </a>
@@ -117,10 +117,9 @@ body {
   <h3>📱 Installation Guide</h3>
   <p>
   1. Click Download App<br>
-  2. Google Drive page will open<br>
-  3. Click Download<br>
-  4. If warning appears, click "Download anyway"<br>
-  5. Install the app
+  2. If warning appears, click "Download anyway"<br>
+  3. Open the file<br>
+  4. Install the app
   </p>
 </div>
 
@@ -146,7 +145,7 @@ We have named our system <b>“KRIXHI MATE”</b> as a simple and recognizable i
 
 <script>
 document.getElementById("downloadBtn").addEventListener("click", function() {
-  document.getElementById("msg").innerText = "Opening download page...";
+  document.getElementById("msg").innerText = "Starting download...";
 });
 </script>
 
