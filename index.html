@@ -1,177 +1,170 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>Krixhi Mate</title>
+  <title>Krixhi Mate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7f6;
+      color: #222;
+    }
 
-<style>
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      align-items: center;
+      padding: 15px 25px;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+    }
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: white;
-}
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-/* NAVBAR */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 25px;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(10px);
-}
+    .logo {
+      width: 40px;
+    }
 
-nav img {
-  width: 40px;
-}
+    /* HERO */
+    .hero {
+      padding: 20px;
+      text-align: center;
+    }
 
-nav h2 {
-  margin: 0;
-}
+    .hero img {
+      width: 100%;
+      border-radius: 12px;
+    }
 
-nav div {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+    /* DOWNLOAD BUTTON */
+    .download-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #28a745;
+      color: white;
+      padding: 14px 28px;
+      font-size: 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 20px;
-}
+    .download-btn:hover {
+      background: #218838;
+    }
 
-.hero img {
-  width: 95%;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
+    /* SECTIONS */
+    section {
+      background: white;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
 
-/* BUTTON */
-.download-btn {
-  margin-top: 20px;
-  display: inline-block;
-  padding: 15px 30px;
-  font-size: 18px;
-  background: linear-gradient(45deg, #00c853, #64dd17);
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-  transition: 0.3s;
-}
-
-.download-btn:hover {
-  transform: scale(1.05);
-}
-
-/* SECTION */
-.section {
-  margin: 20px;
-  padding: 20px;
-  border-radius: 15px;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
-}
-
-/* FEATURES */
-.features {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.feature-box {
-  padding: 15px;
-  border-radius: 10px;
-  background: rgba(0,255,100,0.1);
-}
-
-/* TIMELINE */
-.timeline img {
-  width: 100%;
-  border-radius: 10px;
-  margin-top: 10px;
-}
-
-</style>
+  </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <div>
-    <img src="logo.png">
-    <h2>KRIXHI MATE</h2>
-  </div>
-</nav>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo-area">
+      <img src="logo.png" class="logo">
+      <h2>KRIXHI MATE</h2>
+    </div>
+  </header>
 
-<!-- HERO -->
-<div class="hero">
-  <img src="poster.png">
+  <!-- POSTER -->
+  <section class="hero">
+    <img src="poster.png">
 
-  <a href="https://drive.google.com/file/d/1C8z2B44RY2LNuEIJmIVTJ92nzsQM3V9W/view?usp=drivesdk" class="download-btn">
+    <!-- INSTALL GUIDE -->
+    <div style="background:#1e3c2f; padding:15px; border-radius:10px; margin-top:20px; color:white;">
+      <h3>📱 App Installation Guide</h3>
+      <p style="font-size:14px;">
+        1. Click Download App<br>
+        2. Google may show a warning (this is normal)<br>
+        3. Click <b>"Download anyway"</b><br>
+        4. Open the file and install<br>
+      </p>
+    </div>
+
+    <!-- DOWNLOAD BUTTON -->
+    <a id="downloadBtn" class="download-btn" 
+    href="https://drive.google.com/uc?export=download&id=1C8z2B44RY2LNuEIJmIVTJ92nzsQM3V9W" 
+    target="_blank">
     ⬇ Download App
-  </a>
-</div>
+    </a>
 
-<!-- ABOUT -->
-<div class="section">
-  <h2>About Project</h2>
-  <p>
-    A solar assisted smart agriculture vehicle designed to make farming easy, efficient and modern.
-  </p>
-</div>
+    <p id="msg" style="margin-top:10px; font-size:14px; opacity:0.8;"></p>
 
-<!-- FEATURES -->
-<div class="section">
-  <h2>Our Main Features</h2>
+    <!-- TRUST NOTE -->
+    <p style="font-size:13px; opacity:0.7; margin-top:10px;">
+      ✔ This app is developed by students of Dibrugarh Polytechnic for academic project use.
+    </p>
 
-  <div class="features">
+  </section>
 
-    <div class="feature-box">
-      📡 <b>Wireless Control</b><br>
-      Control vehicle using mobile app in real-time.
-    </div>
+  <!-- ABOUT -->
+  <section>
+    <h2>About Project</h2>
+    <p>
+      A solar assisted smart agriculture vehicle designed to make farming easy, efficient and modern.
+    </p>
+  </section>
 
-    <div class="feature-box">
-      🌱 <b>Seed Sowing</b><br>
-      Automatic seed dispensing mechanism.
-    </div>
+  <!-- FEATURES -->
+  <section>
+    <h2>Our Main Features</h2>
+    <p>📡 Wireless Control – Control vehicle using mobile app</p>
+    <p>🌱 Seed Sowing – Automatic dispensing mechanism</p>
+    <p>💧 Spraying – Uniform pesticide spraying system</p>
+  </section>
 
-    <div class="feature-box">
-      💧 <b>Water / Pesticide Spraying</b><br>
-      Efficient spraying system for uniform coverage.
-    </div>
+  <!-- JOURNEY -->
+  <section>
+    <h2>Fabrication Journey</h2>
 
-  </div>
-</div>
+    <h3>Jan 2026 – Planning</h3>
+    <p>Concept and design phase.</p>
 
-<!-- JOURNEY -->
-<div class="section timeline">
-  <h2>Fabrication Journey</h2>
+    <h3>Feb 2026 – Chassis</h3>
+    <p>Frame fabrication completed.</p>
 
-  <h3>Jan 2026 – Planning</h3>
-  <p>Concept and design phase.</p>
-  <img src="image1.jpg">
+    <h3>Mar 2026 – Motors</h3>
+    <p>Motor and drivetrain installed.</p>
 
-  <h3>Feb 2026 – Chassis</h3>
-  <p>Frame fabrication completed.</p>
-  <img src="image2.jpg">
+    <h3>Apr 2026 – Electronics</h3>
+    <p>Control system integrated.</p>
+  </section>
 
-  <h3>Mar 2026 – Motors</h3>
-  <p>Motor and drivetrain installed.</p>
-  <img src="image3.jpg">
+  <!-- SCRIPT -->
+  <script>
+    document.getElementById("downloadBtn").addEventListener("click", function() {
+      let btn = this;
+      let msg = document.getElementById("msg");
 
-  <h3>Apr 2026 – Electronics</h3>
-  <p>Control system integration done.</p>
-  <img src="image4.jpg">
+      btn.innerText = "Preparing download...";
+      btn.style.background = "#888";
 
-</div>
+      msg.innerText = "If warning appears, click 'Download anyway'.";
+
+      setTimeout(() => {
+        btn.innerText = "⬇ Download App";
+        btn.style.background = "#28a745";
+      }, 3000);
+    });
+  </script>
 
 </body>
 </html>
