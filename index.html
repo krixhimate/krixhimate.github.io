@@ -1,92 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Krixhi Mate</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Krixhi Mate</title>
 
 <style>
 
-/* BASE */
 body {
-  margin: 0;
+  margin:0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #ffffff, #eaf6fb);
-  color: #222;
+  background: linear-gradient(to bottom, #ffffff 40%, #eaf6fb 100%);
 }
 
 /* NAVBAR */
 .navbar {
-  display: flex;
-  align-items: center;
-  padding: 15px 20px;
-  background: white;
-}
-
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:15px 20px;
+  background:white;
 }
 
 .logo {
-  width: 40px;
+  width:35px;
 }
 
 .title {
-  font-size: 22px;
-  font-weight: bold;
+  font-size:22px;
+  font-weight:600;
 }
 
-/* HERO SECTION (WHITE CLEAN AREA) */
+/* HERO */
 .hero {
-  text-align: center;
-  padding: 20px;
-  background: white;
+  background:white;
+  padding:15px;
+  text-align:center;
 }
 
 .hero img {
-  width: 100%;
-  border-radius: 14px;
+  width:100%;
+  border-radius:15px;
 }
 
 /* DOWNLOAD BUTTON */
-.download-btn {
-  margin-top: 20px;
-  padding: 16px 30px;
-  font-size: 18px;
-  background: linear-gradient(45deg, #2ecc71, #27ae60);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+.btn {
+  display:inline-block;
+  margin-top:20px;
+  background: linear-gradient(45deg,#28a745,#2ecc71);
+  color:white;
+  padding:14px 28px;
+  font-size:18px;
+  border-radius:12px;
+  text-decoration:none;
+  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+  transition:0.3s;
+}
+
+.btn:hover {
+  transform:scale(1.05);
 }
 
 /* INSTALL GUIDE */
 .guide {
-  margin: 20px;
-  padding: 18px;
-  background: #1e3c2f;
-  color: white;
-  border-radius: 12px;
-  text-align: center;
+  margin:20px;
+  padding:20px;
+  border-radius:15px;
+  background: linear-gradient(135deg,#1e3c2f,#2f6f54);
+  color:white;
+  text-align:center;
 }
 
-/* SECTIONS */
-.section {
-  margin: 20px;
-  padding: 20px;
+/* CARDS */
+.card {
+  margin:20px;
+  padding:20px;
+  border-radius:15px;
   background: rgba(255,255,255,0.7);
   backdrop-filter: blur(10px);
-  border-radius: 14px;
 }
 
-/* FEATURES STYLE */
+/* FEATURE ITEMS */
 .feature {
-  background: rgba(46,204,113,0.15);
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 10px;
+  background:#dff3ea;
+  padding:12px;
+  margin:10px 0;
+  border-radius:10px;
 }
 
 </style>
@@ -96,89 +95,58 @@ body {
 
 <!-- NAVBAR -->
 <div class="navbar">
-  <div class="logo-area">
-    <img src="logo.png" class="logo">
-    <div class="title">KRIXHI MATE</div>
-  </div>
+  <img src="logo.png" class="logo">
+  <div class="title">KRIXHI MATE</div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
   <img src="poster.png">
 
-  <!-- DOWNLOAD BUTTON -->
-  <br>
-  <button id="downloadBtn" class="download-btn">
-    ⬇ Download App
-  </button>
+  <a id="downloadBtn" class="btn"
+  href="https://drive.google.com/file/d/1C8z2B44RY2LNuEIJmIVTJ92nzsQM3V9W/view"
+  target="_blank">
+  ⬇ Download App
+  </a>
 
-  <p id="msg" style="margin-top:10px; opacity:0.7;"></p>
+  <p id="msg" style="margin-top:10px; font-size:14px; opacity:0.7;"></p>
 </div>
 
 <!-- INSTALL GUIDE -->
 <div class="guide">
   <h3>📱 Installation Guide</h3>
-  <p style="font-size:14px;">
-    1. Click Download App <br>
-    2. Google Drive page will open <br>
-    3. Click Download <br>
-    4. If warning appears, click "Download anyway" <br>
-    5. Install the app
+  <p>
+  1. Click Download App<br>
+  2. Google Drive page will open<br>
+  3. Click Download<br>
+  4. If warning appears, click "Download anyway"<br>
+  5. Install the app
   </p>
 </div>
 
 <!-- ABOUT -->
-<div class="section">
-  <h2>About Project</h2>
+<div class="card">
+<h2>About Project</h2>
 <p>
 This project, officially titled “Solar Assisted Electric Multipurpose Agricultural Vehicle”, is developed as a final year diploma project by Mechanical Engineering students of Dibrugarh Polytechnic, Assam.
 
-We have named our system <b>“KRIXHI MATE”</b> as a simple and recognizable identity for the project. It represents a practical, eco-friendly solution designed to support modern agricultural activities using solar-assisted electric power.
+We have named our system <b>“KRIXHI MATE”</b> as a simple and recognizable identity for the project.
 </p>
 </div>
 
 <!-- FEATURES -->
-<div class="section">
-  <h2>Our Main Features</h2>
+<div class="card">
+<h2>Our Features</h2>
 
-  <div class="feature">📡 Wireless Control – Control via mobile app</div>
-  <div class="feature">🌱 Seed Sowing – Automatic mechanism</div>
-  <div class="feature">💧 Spraying – Uniform pesticide spraying</div>
+<div class="feature">📡 Wireless Control – Control via mobile app</div>
+<div class="feature">🌱 Seed Sowing – Automatic mechanism</div>
+<div class="feature">💧 Spraying – Uniform pesticide spraying</div>
+
 </div>
 
-<!-- JOURNEY -->
-<div class="section">
-  <h2>Fabrication Journey</h2>
-
-  <h3>Jan 2026 – Planning</h3>
-  <p>Concept and design phase.</p>
-
-  <h3>Feb 2026 – Chassis</h3>
-  <p>Frame fabrication completed.</p>
-
-  <h3>Mar 2026 – Motors</h3>
-  <p>Motor and drivetrain installed.</p>
-
-  <h3>Apr 2026 – Electronics</h3>
-  <p>Control system integrated.</p>
-</div>
-
-<!-- SCRIPT -->
 <script>
 document.getElementById("downloadBtn").addEventListener("click", function() {
-
-  let btn = this;
-  let msg = document.getElementById("msg");
-
-  btn.innerText = "Opening download page...";
-  btn.style.background = "#888";
-
-  msg.innerText = "Redirecting to Google Drive...";
-
-  setTimeout(() => {
-    window.location.href = "https://drive.google.com/file/d/1C8z2B44RY2LNuEIJmIVTJ92nzsQM3V9W/view?usp=sharing";
-  }, 1200);
-
+  document.getElementById("msg").innerText = "Opening download page...";
 });
 </script>
 
