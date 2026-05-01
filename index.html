@@ -1,83 +1,177 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Krixhi Mate</title>
-  <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      background: #f4f4f4;
-      text-align: center;
-    }
+<title>Krixhi Mate</title>
 
-    header {
-      background: #111;
-      color: white;
-      padding: 20px;
-    }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    section {
-      padding: 20px;
-      margin: 20px;
-      background: white;
-      border-radius: 10px;
-    }
+<style>
 
-    .btn {
-      background: #28a745;
-      color: white;
-      padding: 15px 25px;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 8px;
-      display: inline-block;
-    }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+}
 
-    img {
-      width: 90%;
-      max-width: 400px;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
-  </style>
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+}
+
+nav img {
+  width: 40px;
+}
+
+nav h2 {
+  margin: 0;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 20px;
+}
+
+.hero img {
+  width: 95%;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* BUTTON */
+.download-btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  background: linear-gradient(45deg, #00c853, #64dd17);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
+}
+
+/* SECTION */
+.section {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feature-box {
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(0,255,100,0.1);
+}
+
+/* TIMELINE */
+.timeline img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>KRIXHI MATE</h1>
-  <p>Solar Assisted Electric Agriculture Vehicle</p>
-</header>
+<!-- NAVBAR -->
+<nav>
+  <div>
+    <img src="logo.png">
+    <h2>KRIXHI MATE</h2>
+  </div>
+</nav>
 
-<section>
+<!-- HERO -->
+<div class="hero">
+  <img src="poster.png">
+
+  <a href="https://drive.google.com/file/d/1C8z2B44RY2LNuEIJmIVTJ92nzsQM3V9W/view?usp=drivesdk" class="download-btn">
+    ⬇ Download App
+  </a>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
   <h2>About Project</h2>
   <p>
-    Developed by Mechanical Engineering students of Dibrugarh Polytechnic.
-    A smart solar-powered agriculture utility vehicle.
+    A solar assisted smart agriculture vehicle designed to make farming easy, efficient and modern.
   </p>
-</section>
+</div>
 
-<section>
-  <h2>Download App</h2>
-  <a class="btn" href="YOUR_LINK">Download APK</a>
-</section>
+<!-- FEATURES -->
+<div class="section">
+  <h2>Our Main Features</h2>
 
-<section>
+  <div class="features">
+
+    <div class="feature-box">
+      📡 <b>Wireless Control</b><br>
+      Control vehicle using mobile app in real-time.
+    </div>
+
+    <div class="feature-box">
+      🌱 <b>Seed Sowing</b><br>
+      Automatic seed dispensing mechanism.
+    </div>
+
+    <div class="feature-box">
+      💧 <b>Water / Pesticide Spraying</b><br>
+      Efficient spraying system for uniform coverage.
+    </div>
+
+  </div>
+</div>
+
+<!-- JOURNEY -->
+<div class="section timeline">
   <h2>Fabrication Journey</h2>
 
   <h3>Jan 2026 – Planning</h3>
-  <p>Initial design and concept.</p>
+  <p>Concept and design phase.</p>
+  <img src="image1.jpg">
 
   <h3>Feb 2026 – Chassis</h3>
   <p>Frame fabrication completed.</p>
+  <img src="image2.jpg">
 
   <h3>Mar 2026 – Motors</h3>
   <p>Motor and drivetrain installed.</p>
+  <img src="image3.jpg">
 
   <h3>Apr 2026 – Electronics</h3>
-  <p>Control system integrated.</p>
+  <p>Control system integration done.</p>
+  <img src="image4.jpg">
 
-</section>
+</div>
 
 </body>
 </html>
